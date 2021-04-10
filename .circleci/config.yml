@@ -2,15 +2,14 @@
 version: 2.1
 
 commands:
+ 
  print_pipeline_id:
-
-  description: "printng job id"
   parameters:
-
    id:
+    type: string
 
-    steps:
-     - run: echo ${CIRCLE_WORKFLOW_ID}
+   steps:
+    - run: << parameters.id >>
 
  
 
@@ -30,6 +29,7 @@ jobs:
 
   steps:
    - print_pipeline_id
+      id: << pipeline.id >>
 
 
 
