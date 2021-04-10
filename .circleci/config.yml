@@ -8,8 +8,8 @@ commands:
    id:
     type: string
 
-   steps:
-    - run: << parameters.id >>
+  steps:
+   - run: << parameters.id >>
 
  
 
